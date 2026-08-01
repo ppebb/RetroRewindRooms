@@ -267,5 +267,6 @@ setInterval(updateGroups, 60000);
 // Initial call
 updateGroups();
 
+const ADDR = process.env.ADDR || "127.0.0.1";
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+app.listen(PORT, ADDR, () => console.log(`listening on ${ADDR}:${PORT}`));
